@@ -1,6 +1,6 @@
 # Package Tracking Chatbot CLI
 
-A simple Python-based command-line chatbot that helps users track a (demo) lost package by verifying a tracking number and name, then guiding them through delivery status checks, refund/replacement requests, and looping to track additional packages.
+A simple Python-based command-line interface chatbot that assists users with their lost packages by verifying a tracking number and name, then guiding them through delivery status checks, refund/replacement requests, and looping to track additional packages.
 
 ---
 
