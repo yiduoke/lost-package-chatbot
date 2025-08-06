@@ -55,7 +55,7 @@ A simple Python-based command-line interface chatbot that assists users with the
 
 ## Demo Test Cases
 
-Try the following sequences:
+There are two predefined tracking numbers for test usage:
 
 | Tracking #  | Name      |  
 |-------------|-----------|
