@@ -125,3 +125,9 @@ Bot: Great! Would you like to track another package? (yes/no)
 You: no
 Bot: Thank you! Goodbye.
 ```
+
+---
+
+## 📈 Flowchart
+
+![](flowchart.png)
