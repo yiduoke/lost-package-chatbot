@@ -24,7 +24,7 @@ A simple Python-based command-line interface chatbot that assists users with the
 
 ---
 
-## 👩‍💻 Usage
+## Usage
 
 1. **Welcome prompt**  
    The bot greets you and asks for a tracking number. You may type `END` at any point to end the conversation.
@@ -53,7 +53,7 @@ A simple Python-based command-line interface chatbot that assists users with the
 
 ---
 
-## 🧪 Demo Test Cases
+## Demo Test Cases
 
 Try the following sequences:
 
