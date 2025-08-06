@@ -5,7 +5,9 @@ Supports two valid records: 12345678 -> yiduo, 88888888 -> cameron
 """
 
 def chatbot():
-    # Predefined valid tracking-number -> user-name map
+    # Predefined valid {tracking-number: user-name} hashmap
+    # The two valid tracking numbers are 12345678 and 88888888
+    # And their respective owners are yiduo and cameron
     valid_records = {
         '12345678': 'yiduo',
         '88888888': 'cameron'
@@ -14,10 +16,12 @@ def chatbot():
     tracking_number = ''
 
     while True:
+        # Start of the conversation
         if state == 'start':
-            print("Bot: Welcome! You may end the conversation at any time by typing 'END'. Please enter your package tracking number.")
+            print("Bot: Welcome! You may end this conversation at any time by typing 'END'. Please enter your package tracking number.")
             state = 'await_tracking'
-
+        
+        # Waiting for user to enter a tracking number
         elif state == 'await_tracking':
             user = input('You: ').strip()
             if user.upper() == 'END':
@@ -28,8 +32,9 @@ def chatbot():
                 print('Bot: Got it. Please enter your name as on the order.')
                 state = 'await_name'
             else:
-                print('Bot: I cannot find this number. Please check and try again.')
+                print('Bot: Hmmm I cannot find this number. Please check and try again.')
 
+        # Waiting for user to enter their name
         elif state == 'await_name':
             user = input('You: ').strip().lower()
             if user.upper() == 'END':
@@ -40,8 +45,9 @@ def chatbot():
                 print(f"Bot: Your package (#{tracking_number}) was delivered on August 4th, 2025. Have you received it? (yes/no)")
                 state = 'await_received'
             else:
-                print("Bot: That doesn't match our records. Please check your spelling and try again.")
+                print("Bot: Hmmm that doesn't match our records. Please check your spelling and try again.")
 
+        # Waiting for using to answer whether they've received their package
         elif state == 'await_received':
             user = input('You: ').strip().lower()
             if user.upper() == 'END':
@@ -56,6 +62,7 @@ def chatbot():
             else:
                 print('Bot: Please reply with yes or no.')
 
+        # User said they did not receive the package. Waiting for user to answer whether they've checked everywhere already
         elif state == 'await_checked':
             user = input('You: ').strip().lower()
             if user.upper() == 'END':
@@ -65,13 +72,14 @@ def chatbot():
                 print('Bot: Would you like a refund or a replacement? (refund/replace)')
                 state = 'await_choice'
             elif user in ('no', 'n'):
-                print('Bot: Please check around porch, mailbox, or with your neighbors and let me know.')
+                print('Bot: Please check around your porch, mailbox, or with your neighbors.')
                 # Immediately ask to track another package
                 print('Bot: Would you like to track another package? (yes/no)')
                 state = 'await_another'
             else:
                 print('Bot: Please reply with yes or no.')
 
+        # User affirmed that they checked everywhere already. Waiting for user to answer whether they want a refund or replacement
         elif state == 'await_choice':
             user = input('You: ').strip().lower()
             if user.upper() == 'END':
@@ -89,6 +97,7 @@ def chatbot():
             else:
                 print('Bot: Please type refund or replace.')
 
+        # Waiting for user to answer whether they want to track another package
         elif state == 'await_another':
             user = input('You: ').strip().lower()
             if user.upper() == 'END':
