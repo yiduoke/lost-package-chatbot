@@ -68,7 +68,7 @@ def chatbot():
             if user.upper() == 'END': # user may end the convo at any time
                 print('Bot: Thank you! Goodbye.')
                 break
-            if user in ('yes', 'y'): # user has checked everywhere for the missing package
+            if user in ('yes', 'y'): # user has checked everywhere for the missing package already
                 print('Bot: Would you like a refund or a replacement? (refund/replace)')
                 state = 'await_choice'
             elif user in ('no', 'n'): # user has not checked everywhere yet
