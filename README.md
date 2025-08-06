@@ -128,6 +128,6 @@ Bot: Thank you! Goodbye.
 
 ---
 
-## 📈 Flowchart
+## Flowchart of chatbot logic
 
 ![](flowchart.png)
