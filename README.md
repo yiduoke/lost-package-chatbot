@@ -57,10 +57,10 @@ A simple Python-based command-line interface chatbot that assists users with the
 
 Try the following sequences:
 
-| Tracking #  | Name      | Expected Flow                                   |
-|-------------|-----------|-------------------------------------------------|
-| `12345678`  | `yiduo`   | Valid → Name match → Delivered msg → …          |
-| `88888888`  | `cameron` | Same as above, but with the second record       |
+| Tracking #  | Name      |  
+|-------------|-----------|
+| `12345678`  | `yiduo`   |  
+| `88888888`  | `cameron` |
 
 Example session:
 ```text
